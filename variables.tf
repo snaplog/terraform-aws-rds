@@ -46,6 +46,12 @@ variable "tags" {
   description = "Additional tags (e.g. `map('BusinessUnit','XYZ')`"
 }
 
+variable "dns_create" {
+  type        = bool
+  default     = false
+  description = "Create a new DNS record will be created for the DB host name. Requires dns_zone_id"
+}
+
 variable "dns_zone_id" {
   type        = string
   default     = ""
